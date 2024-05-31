@@ -1,3 +1,4 @@
+
 # SpringBoot+Vue.js-Project-SSAFIT
 운동 스케쥴 관리 및 루틴을 추천, 사용자간 운동 경쟁이 활성화된 사이트
 
@@ -61,3 +62,8 @@ Inbody유사도 분석 알고리즘을 바탕으로한 사용자간 그룹매칭
 - 운동 기록 타임라인
 - AI 운동 루틴 추천
 - 파티원 달성률 조회
+
+## 성과
+- 1등!
+<img src="https://github.com/JOON-KR/SSAFY-11th-1st-Semester-Final-Project/assets/171137407/97e05bc5-d7a1-4d13-9bd4-cc92bc1b9708" width="400" height="600" alt="Image Description">
+
