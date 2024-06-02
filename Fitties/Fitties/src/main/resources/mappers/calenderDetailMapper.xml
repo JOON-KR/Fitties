@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.fitty.model.dao.calendar.CalendarDetailDao">
+    
+    <!-- 등록-->
+    <insert id="insertCalendar" parameterType="CalendarDetail" >
+       INSERT INTO calendarDetail ( user_id, fit_part,start_time)
+        VALUES ( #{userId},  #{fitPart}, #{startTime})
+    </insert>
+    <insert id="random" parameterType="CalendarDetail" >
+       INSERT INTO calendarDetail ( user_id, fit_part,start_time, end_time)
+        VALUES ( #{userId},  #{fitPart}, #{startTime}, #{endTime})
+    </insert>
+    
+    <!-- 조회 -->
+    <select id="searchById" parameterType="String" resultType="CalendarDetail">
+        SELECT * FROM calendarDetail WHERE user_id = #{userId}
+    </select>
+
+    <!-- 유저 삭제  -->
+    <delete id="deleteCalendar" parameterType="int">
+        DELETE FROM calendarDetail
+        WHERE num = #{num};
+    </delete>
+    
+    <!-- 유저 정보 수정 -->
+    <update id="end" parameterType="CalendarDetail">
+        UPDATE calendarDetail
+        SET  end_time= #{endTime}
+        WHERE num = #{num};
+    </update>
+    
+    <update id="editPart" parameterType="CalendarDetail">
+        UPDATE calendarDetail
+        SET  fit_part= #{fitPart}
+        WHERE num = #{num};
+    </update>
+    
+    <select id="valid" parameterType="String" resultType="int">
+    	SELECT count(*) FROM calendardetail WHERE DATE(start_time) = CURDATE() and user_id = #{userId};
+    </select>
+    
+    <delete id="deleteCur" parameterType="String">
+    DELETE FROM calendardetail WHERE DATE(start_time) = CURDATE() AND user_id = #{userId}
+</delete>
+</mapper>

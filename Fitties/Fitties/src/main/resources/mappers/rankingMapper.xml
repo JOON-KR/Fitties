@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.fitty.model.dao.util.RankingDao">
+    
+    <!-- 등록-->
+    <insert id="insertRanking" parameterType="Ranking" >
+       INSERT INTO ranking ( user_id, nickname, tier_rank, level_rank, streak_rank)
+       	VALUES (  #{userId}, #{nickname}, #{tierRank}, #{levelRank}, #{streakRank})
+    </insert>
+
+    <!--  삭제  -->
+    <delete id="deleteRanking" >
+        DELETE FROM ranking
+    </delete>
+    
+    <!-- 조회 -->
+    <select id="tierRank" resultType="Ranking">
+    	SELECT * FROM ranking ORDER BY tier_rank ASC
+    </select>
+    <select id="levelRank" resultType="Ranking">
+    	SELECT * FROM ranking ORDER BY level_rank ASC
+    </select>
+    <select id="streakRank" resultType="Ranking">
+    	SELECT * FROM ranking ORDER BY streak_rank ASC
+    </select>
+    
+    <select id="userRank" parameterType="String" resultType="Ranking">
+    	SELECT * FROM ranking WHERE user_id = #{userId}
+    </select>
+    
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.fitty.model.dao.user.UserPointDao">
+    
+    <!-- 유저 조회 -->
+    <select id="searchUserPoint" parameterType="String" resultType="UserPoint">
+    	SELECT * FROM userPoint WHERE user_id = #{userId}
+    </select>
+    
+    <!-- 등록 -->
+    <insert id="insertUserPoint" parameterType="UserPoint" >
+       INSERT INTO userPoint (user_id)
+       	VALUES (#{userId})
+    </insert>
+    <!-- 삭제  -->
+    <delete id="deleteUserPoint" parameterType="String">
+        DELETE FROM userPoint
+        WHERE user_id = #{userId};
+    </delete>
+    
+    <!-- 유저 정보 수정 -->
+    <update id="updateUserPoint" parameterType="UserPoint">
+        UPDATE userpoint
+        SET  season = #{season}, point= #{point}
+        WHERE user_id = #{userId};
+    </update>
+    
+    <!-- 모든 정보 조회--> 
+   <select id="searchAllUserPoint" resultType="UserPoint">
+		SELECT * FROM userPoint
+   </select>
+    
+    
+</mapper>

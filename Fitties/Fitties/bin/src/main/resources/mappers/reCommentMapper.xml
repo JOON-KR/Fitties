@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.fitty.model.dao.board.ReCommentDao">
+    <!-- 대댓글 등록 -->
+    <insert id="insertReComment" parameterType="com.ssafy.fitty.model.dto.board.ReComment" keyProperty="reCommentNum" useGeneratedKeys="true">
+        INSERT INTO boardrecomment (comment_num, writer, content)
+        VALUES (#{commentNum}, #{writer}, #{content});
+    </insert>
+
+    <!-- 대댓글 삭제  -->
+    <delete id="deleteReComment" parameterType="int">
+        DELETE FROM boardrecomment
+        WHERE re_comment_num = #{reCommentNum};
+    </delete>
+    
+    <!-- 대댓글 수정 -->
+    <update id="updateReComment" parameterType="com.ssafy.fitty.model.dto.board.ReComment">
+        UPDATE boardrecomment
+        SET content = #{content}, is_edit = true
+        WHERE re_comment_num = #{reCommentNum};
+    </update>
+    
+    <!-- 전체 대댓글 조회 -->
+    <select id="searchReComment" resultType="com.ssafy.fitty.model.dto.board.ReComment">
+        SELECT comment_num, is_edit, re_comment_num, reg_date, writer, content 
+        FROM boardrecomment;
+    </select>
+</mapper>

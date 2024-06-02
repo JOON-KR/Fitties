@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 네임스페이스에 DAO 풀패키지명을 작성 -->
+<mapper namespace="com.ssafy.fitty.model.dao.board.CommentDao">
+	<!-- 댓글 등록 -->
+    <insert id="insertComment" parameterType="Comment">
+        INSERT INTO boardComment (board_num, writer, content)
+        VALUES (#{boardNum}, #{writer}, #{content});
+    </insert>
+
+	<!-- 댓글 삭제  -->
+    <delete id="deleteComment" parameterType="int">
+        DELETE FROM boardComment
+        WHERE comment_num = #{commentNum};
+    </delete>
+    
+    <!-- 게시글 수정 -->
+    <update id="updateComment" parameterType="Comment">
+        UPDATE boardComment
+        SET content = #{content}, reg_date = now()
+        WHERE comment_num = #{commentNum};
+    </update>
+    
+    <!-- 전체 댓글 조회 -->
+    <select id="searchComment" resultType="Comment">
+        SELECT *
+        FROM boardComment
+        WHERE board_num = #{boardNum};
+    </select>
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.fitty.model.dao.user.UserProfileDao">
+    
+    <!-- 등록 -->
+    <insert id="insertUserProfile" parameterType="UserProfile" >
+       INSERT INTO userProfile (user_id, gender, image,  muscle, fat, bmi, fat_per, weight)
+           VALUES (#{userId}, #{gender}, #{image},  #{muscle}, #{fat}, #{bmi}, #{fatPer}, #{weight})
+    </insert>
+    <!-- 유저 조회 -->
+    <select id="userTimeLine" parameterType="String" resultType="UserProfile">
+        SELECT * FROM userProfile WHERE user_id = #{userId} ORDER BY reg_date DESC
+    </select>
+    
+    <select id="currentUserProfile" parameterType="String" resultType="UserProfile">
+        SELECT * FROM userProfile WHERE user_id = #{userId} ORDER BY reg_date DESC LIMIT 1
+    </select>
+    
+    
+    <select id="allUserProfile" resultType="UserProfile">
+    SELECT userProfile.* FROM userProfile
+        INNER JOIN ( SELECT user_id, MAX(reg_date) AS latest_reg_date
+            FROM userProfile GROUP BY user_id) 
+                AS latest ON userProfile.user_id = latest.user_id AND userProfile.reg_date = latest.latest_reg_date;
+    
+    </select>
+    
+    <!-- 삭제  -->
+    <delete id="deleteUserProfile" parameterType="int">
+        DELETE FROM userProfile
+        WHERE id = #{id};
+    </delete>
+     
+    <select id="findSimilar" resultType="UserProfile">
+          SELECT DISTINCT *
+        FROM userProfile
+        LEFT JOIN fitty ON userProfile.user_id = fitty.user_id
+        WHERE fitty.user_id IS NULL;
+    </select>
+</mapper>

@@ -1,0 +1,293 @@
+[33mcommit fe97c8f100e3c93b8fcf386d9b65db23a4667659[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Jun <yyj4148@naver.com>
+Date:   Thu May 16 17:56:37 2024 +0900
+
+    tlqkf
+
+[33mcommit 9e279fb0ba1e3ac3407ad56d996ab705a07fa877[m
+Author: Jun <yyj4148@naver.com>
+Date:   Thu May 16 16:55:54 2024 +0900
+
+    update user Profile vue
+
+[33mcommit 82b2339d4ae3bb986e19ff9f26cdfad63a4dca63[m
+Author: Jun <yyj4148@naver.com>
+Date:   Thu May 16 14:59:30 2024 +0900
+
+    update vue userRank
+
+[33mcommit 9e52f08dbac4f10515292985d244fb735dbc6629[m
+Author: Jun <yyj4148@naver.com>
+Date:   Thu May 16 10:25:21 2024 +0900
+
+    update vue login/logout
+
+[33mcommit 1ea0614eb043a4eabf805190d2a0bd4c4d11586c[m
+Author: MG <mg2937@naver.com>
+Date:   Thu May 16 09:04:52 2024 +0900
+
+    CREATE VUE
+
+[33mcommit 0baabfefbc50796b11473ccd0901e1328b0546f2[m
+Author: Jun <yyj4148@naver.com>
+Date:   Wed May 15 23:11:54 2024 +0900
+
+    add method User
+
+[33mcommit ba56388ad5af1131b5fb5fd12ded71d5624a9a23[m
+Merge: fa21ab6 caf2d74
+Author: MG <mg2937@naver.com>
+Date:   Tue May 14 17:09:40 2024 +0900
+
+    Merge branch 'master' of https://lab.ssafy.com/mnj/Fitties
+
+[33mcommit fa21ab60888df48d2ea9a0cdaeba33a397652d91[m
+Author: MG <mg2937@naver.com>
+Date:   Tue May 14 17:09:14 2024 +0900
+
+    Update SQL
+
+[33mcommit caf2d74f9ccff473fad510b3af78380d1665cc9f[m
+Author: Jun <yyj4148@naver.com>
+Date:   Tue May 14 17:07:21 2024 +0900
+
+    update sql
+
+[33mcommit a0ee6f19be06eb17256865c5afe9cd8b0f95d5a8[m
+Author: Jun <yyj4148@naver.com>
+Date:   Tue May 14 16:46:19 2024 +0900
+
+    Validation BoardFitty Rest Api
+
+[33mcommit 7d8fddae245ef2995fd112963a4411666a71fecd[m
+Author: MG <mg2937@naver.com>
+Date:   Tue May 14 16:30:52 2024 +0900
+
+    Update 0514
+
+[33mcommit 8d7f10a5baeb3f3a8525ad60cb81ec9e2da944d6[m
+Author: Jun <yyj4148@naver.com>
+Date:   Tue May 14 16:21:16 2024 +0900
+
+    Validition CalendarDetail Rest Api
+
+[33mcommit a30b4eb2259034e13cd2cc4dec76c1fde91d8152[m
+Author: Jun <yyj4148@naver.com>
+Date:   Tue May 14 14:59:59 2024 +0900
+
+    VALIDATION REST API FITTY
+
+[33mcommit 04e7ee5c2cf567bf91c82e86e6837687e965bba4[m
+Author: Jun <yyj4148@naver.com>
+Date:   Tue May 14 13:53:59 2024 +0900
+
+    add Schema
+
+[33mcommit 2e87514cf00c047a447ca7ff2276b2f1cca1c4c8[m
+Author: Jun <yyj4148@naver.com>
+Date:   Tue May 14 13:47:19 2024 +0900
+
+    Validation Rest API
+
+[33mcommit be16fdb8c867920509bbfc876557990dbe78a2da[m
+Author: Jun <yyj4148@naver.com>
+Date:   Tue May 14 10:37:22 2024 +0900
+
+    Validation User Package Rest API
+
+[33mcommit 62bc47d760df9671fbfad1a65d5e05a16c078b93[m
+Merge: fe28c7e 00a0342
+Author: MG <mg2937@naver.com>
+Date:   Mon May 13 22:51:11 2024 +0900
+
+    Merge branch 'master' of https://lab.ssafy.com/mnj/Fitties
+
+[33mcommit fe28c7ef3c715f7b4920f0c666b2eb2a0217f311[m
+Author: MG <mg2937@naver.com>
+Date:   Mon May 13 22:50:54 2024 +0900
+
+    Update 240513
+
+[33mcommit 00a0342bd31537edbc2e0d47c574ded72b919a17[m
+Author: Jun <yyj4148@naver.com>
+Date:   Mon May 13 22:39:09 2024 +0900
+
+    CHECK UserRankRest API
+
+[33mcommit 4ba10af717ce4e49ab4ab5c2914410db26962d5b[m
+Merge: 5d181f8 bad3aaf
+Author: MG <mg2937@naver.com>
+Date:   Mon May 13 21:29:49 2024 +0900
+
+    CREATE RestController
+
+[33mcommit 5d181f8c851c1bcfa3f6104834484d6de15603f5[m
+Author: MG <mg2937@naver.com>
+Date:   Mon May 13 21:27:04 2024 +0900
+
+    CREATE RESTController
+
+[33mcommit bad3aafdb527230d9ceb94a435bc61df363fe39c[m
+Author: Jun <yyj4148@naver.com>
+Date:   Mon May 13 21:23:14 2024 +0900
+
+    update security
+
+[33mcommit 32d1401698129dd03d3af65f8eb3238f04def6a3[m
+Author: Jun <yyj4148@naver.com>
+Date:   Mon May 13 20:52:39 2024 +0900
+
+    update security
+
+[33mcommit 7669c26c248bf7f9a33b72ab7399b622b853071e[m
+Author: Jun <yyj4148@naver.com>
+Date:   Mon May 13 17:59:57 2024 +0900
+
+    f
+
+[33mcommit 1715e0d7fbd31a7dae08868d02c5dbc397842539[m
+Author: Jun <yyj4148@naver.com>
+Date:   Mon May 13 16:38:14 2024 +0900
+
+    add Schedule api
+
+[33mcommit 7b7cc7a5ec95e3b33c41b909031b496d7c5cf8ff[m
+Author: Jun <yyj4148@naver.com>
+Date:   Mon May 13 15:26:18 2024 +0900
+
+    edit
+
+[33mcommit 9d2ec91a49f92c1bea5f79bfd1599e5f18aff25b[m
+Author: Jun <yyj4148@naver.com>
+Date:   Mon May 13 14:50:15 2024 +0900
+
+    add CalenderController
+
+[33mcommit b32369146eaad2819b2af61815a6185e416d4513[m
+Author: Jun <yyj4148@naver.com>
+Date:   Mon May 13 13:56:51 2024 +0900
+
+    add Random / Math util and Test
+
+[33mcommit 675c9fc028ee90e4b135846c9e0a76ae9cc43699[m
+Author: Jun <yyj4148@naver.com>
+Date:   Sun May 12 17:19:46 2024 +0900
+
+    add MathUtils
+
+[33mcommit 1449f6ae16374063215c2640aa32cae7799b7fcf[m
+Author: MG <mg2937@naver.com>
+Date:   Sun May 12 16:46:41 2024 +0900
+
+    Update 0512
+
+[33mcommit 10378b478fa830a9fe5d65bf077fb93b9633338a[m
+Author: Jun <yyj4148@naver.com>
+Date:   Sun May 12 16:41:12 2024 +0900
+
+    add UserPart RestController
+
+[33mcommit 1d9f17319793286e7a0b39e2f0e9f2bba93690f2[m
+Merge: 5a543e2 5c872f3
+Author: Jun <yyj4148@naver.com>
+Date:   Sun May 12 01:17:23 2024 +0900
+
+    Merge branch 'master' of https://lab.ssafy.com/mnj/Fitties
+
+[33mcommit 5a543e24f87067887bf6be879b6c20a4862cc4d5[m
+Author: Jun <yyj4148@naver.com>
+Date:   Sun May 12 01:16:52 2024 +0900
+
+    add role
+
+[33mcommit 5c872f31a26011c027f106d2eb19decfbba79c2f[m
+Author: MG <mg2937@naver.com>
+Date:   Sun May 12 01:02:41 2024 +0900
+
+    service add
+
+[33mcommit 22ab1dbef161bd76d12a9e196d44f8df6a954bcf[m
+Merge: f6ab355 6a96bdf
+Author: MG <mg2937@naver.com>
+Date:   Sun May 12 00:58:20 2024 +0900
+
+    Merge branch 'master' of https://lab.ssafy.com/mnj/Fitties
+
+[33mcommit f6ab355ef4841f50f879095410ae9a1247e77df6[m
+Author: MG <mg2937@naver.com>
+Date:   Sun May 12 00:56:43 2024 +0900
+
+    update 0511
+
+[33mcommit 6a96bdf8e53d2a60cc5717c39f5d85403cc2264d[m
+Author: Jun <yyj4148@naver.com>
+Date:   Sun May 12 00:54:26 2024 +0900
+
+    updatesecurity
+
+[33mcommit dc82621caff558169050f4eaa2b5aae43548f795[m
+Author: Jun <yyj4148@naver.com>
+Date:   Sat May 11 22:36:51 2024 +0900
+
+    package update
+
+[33mcommit c3baffeed2521f6797bd2ec08e4582108365afb9[m
+Author: Jun <yyj4148@naver.com>
+Date:   Sat May 11 22:34:11 2024 +0900
+
+    package update
+
+[33mcommit b1b49aafc4ae188720c9f32d80e51647b6336c2a[m
+Merge: f71f7c8 cfb4d7e
+Author: MG <mg2937@naver.com>
+Date:   Sat May 11 22:08:55 2024 +0900
+
+    modify
+
+[33mcommit f71f7c85df5dfdd1b72073216832b0134c4667ff[m
+Author: MG <mg2937@naver.com>
+Date:   Sat May 11 22:03:01 2024 +0900
+
+    update
+
+[33mcommit cfb4d7e570a22f015afab6d951dce10ea5e2381b[m
+Author: Jun <yyj4148@naver.com>
+Date:   Sat May 11 21:55:54 2024 +0900
+
+    security
+
+[33mcommit 2b73d05de0db8d62d540ac461ff7d146c02d304d[m
+Author: MG <mg2937@naver.com>
+Date:   Sat May 11 19:44:31 2024 +0900
+
+    Update mapper
+
+[33mcommit c5a26fa3b4eaf62b379f7be4cf6e57b1ca667b47[m
+Author: suah <sue000504@naver.com>
+Date:   Thu May 9 17:51:46 2024 +0900
+
+    config 추가, usercontroller,mybatis config
+
+[33mcommit 510eb6383f84b3c846c245691aa224f01451db98[m
+Author: MG <mg2937@naver.com>
+Date:   Wed May 8 16:14:52 2024 +0900
+
+    Update readme.txt
+
+[33mcommit 619c41d545655af3fe6f337b3e8f759a90f9cff5[m
+Author: 성민기 <mg2937@naver.com>
+Date:   Wed May 8 16:12:35 2024 +0900
+
+    Add new file
+
+[33mcommit 35c98274d34869eab9db78b3f767084b3bad80d4[m
+Author: MG <mg2937@naver.com>
+Date:   Wed May 8 15:54:40 2024 +0900
+
+    1
+
+[33mcommit a4982b6f6105cfb2d026e839490647224b827248[m
+Author: 성민기 <mg2937@naver.com>
+Date:   Wed May 8 15:48:37 2024 +0900
+
+    Initial commit

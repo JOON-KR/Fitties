@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 네임스페이스에 DAO 풀패키지명을 작성 -->
+<mapper namespace="com.ssafy.fitty.model.dao.fitty.FittyDao">
+    <!-- 등록 -->
+    <insert id="insertFitty" parameterType="Fitty" >
+        INSERT INTO Fitty (user_id, fitty_name, status, is_open,goal)
+        VALUES (#{userId}, #{fittyName}, #{status}, #{isOpen}, #{goal});
+    </insert>
+    
+    <!-- 삭제  -->
+    <delete id="deleteFitty" parameterType="String">
+        DELETE FROM Fitty
+        WHERE fitty_name = #{fittyName};
+    </delete>
+    
+    <!-- 수정 -->
+    <update id="updateFitty" parameterType="String">
+        UPDATE Fitty
+        SET status = 'member'
+        WHERE user_id = #{userId};
+    </update>
+    
+    <select id="searchById" parameterType="String" resultType="Fitty">
+        SELECT *
+        FROM Fitty
+        WHERE user_id = #{userId};
+    </select>
+    
+    <select id="searchByFittyName" parameterType="String" resultType="Fitty">
+        SELECT *
+        FROM Fitty
+        WHERE fitty_name = #{fittyName} and is_open = 1
+    </select>
+    
+     <select id="searchFriend" parameterType="String" resultType="Fitty">
+        SELECT *
+        FROM Fitty
+        WHERE fitty_name = #{fittyName} and status = 'member'
+    </select>
+    
+    <delete id="quitFitty" parameterType="String">
+        DELETE FROM Fitty
+        WHERE user_id = #{userId};
+    </delete>
+    
+    <select id="allFitty" resultType="Fitty">
+    SELECT * FROM fitty 
+WHERE is_open = 1
+AND (status = 'admin' OR status = 'member')
+    </select>
+    
+     <select id="fitty" resultType="Fitty">
+    SELECT * FROM fitty 
+    </select>
+    
+   <select id="guestFitty" parameterType="String" resultType="Fitty">
+    SELECT * FROM Fitty
+    WHERE status = 'guest' AND fitty_name = #{fittyName}
+</select>
+
+  <select id="searchByMyFitty" parameterType="String" resultType="Fitty">
+        SELECT *
+        FROM Fitty
+        WHERE fitty_name = #{fittyName}
+    </select>
+
+</mapper>

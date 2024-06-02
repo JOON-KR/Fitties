@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 네임스페이스에 DAO 풀패키지명을 작성 -->
+<mapper namespace="com.ssafy.fitty.model.dao.fitty.BoardFittyDao">
+	<!-- 전체 게시글 조회 -->
+	<select id="selectAll" resultType="BoardFitty">
+        SELECT  * FROM boardFitty;
+    </select>
+    
+    <!-- 상세 게시글 조회 -->
+    <select id="selectOne"  resultType="BoardFitty" parameterType="int">
+        SELECT * FROM boardFitty
+        WHERE num = #{num};
+    </select>
+    
+    <!-- 게시글 등록 -->
+    <insert id="insertBoard" parameterType="BoardFitty">
+        INSERT INTO boardFitty (writer, title, content, fitty_name, limit_num, limit_level)
+        VALUES (#{writer}, #{title}, #{content}, #{fittyName}, #{limitNum}, #{limitLevel});
+    </insert>
+    
+    <!-- 게시글 삭제  -->
+    <delete id="deleteBoard" parameterType="int">
+        DELETE FROM boardFitty
+        WHERE num = #{num};
+    </delete>
+    
+    <!-- 게시글 수정 -->
+    <update id="updateBoard" parameterType="BoardFitty">
+        UPDATE boardFitty
+        SET title = #{title}, content = #{content}, fitty_name = #{fittyName}, limit_num = #{limitNum}, limit_level = #{limitLevel} 
+        WHERE num = #{num};
+    </update>
+    
+    <!-- 검색기능 -->
+    <select id="findFitty"  resultType="BoardFitty" parameterType="SearchCondition">
+        SELECT *
+        FROM boardFitty
+        <!-- 동적쿼리(검색 조건) -->
+        <if test="key != null">
+            WHERE ${key} LIKE concat('%', #{word}, '%')
+        </if>
+        <!-- 동적쿼리(정렬 조건) -->
+        <if test="orderBy != null">
+            ORDER BY ${orderBy} ${orderByDir}
+        </if>    
+            
+    </select>
+    
+    
+</mapper>

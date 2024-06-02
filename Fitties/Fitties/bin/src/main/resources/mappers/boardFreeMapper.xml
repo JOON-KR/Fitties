@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 네임스페이스에 DAO 풀패키지명을 작성 -->
+<mapper namespace="com.ssafy.fitty.model.dao.board.BoardFreeDao">
+	<!-- 전체 게시글 조회 -->
+    <select id="selectAll" resultType="BoardFree">
+        SELECT * 
+        FROM boardFree;
+    </select>
+    
+    <!-- 상세 게시글 조회 -->
+    <select id="selectOne"  resultType="BoardFree" parameterType="int">
+        SELECT * FROM boardFree
+        WHERE num = #{num};
+    </select>
+    
+    <!-- 게시글 등록 -->
+    <insert id="insertBoard" parameterType="BoardFree">
+        INSERT INTO boardFree (writer, title, content, reg_date, file_id)
+        VALUES (#{writer}, #{title}, #{content}, #{regDate}, #{fileId});
+    </insert>
+
+	<!-- 게시글 삭제  -->
+    <delete id="deleteBoard" parameterType="int">
+        DELETE FROM boardFree
+        WHERE num = #{num};
+    </delete>
+    
+    <!-- 게시글 수정 -->
+    <!-- 만약에 날짜가 수정날짜 였다면 같이 수정해줘야된다. -->
+    <update id="updateBoard" parameterType="BoardFree">
+        UPDATE boardFree
+        SET title = #{title}, content = #{content}, file_id = #{fileId}, is_edit = true
+        WHERE num = #{num};
+    </update>
+    
+	<!-- 조회수 증가 -->
+    <update id="updateViewCnt" parameterType="int">  
+        UPDATE boardFree
+        SET view_cnt = view_cnt+1
+        WHERE num = #{num};
+    </update>
+    
+    <!-- 좋아요수 증가 -->
+    <update id="updateLikeCnt" parameterType="int">
+        UPDATE boardFree
+        SET like_cnt = like_cnt+1
+        WHERE num = #{num};
+    </update>
+    
+    <!-- 검색기능 -->
+    <select id="findBoard"  resultType="BoardFree" parameterType="SearchCondition">
+        SELECT * 
+        FROM boardFree
+        <!-- 동적쿼리(검색 조건) -->
+        <if test="key != null">
+            WHERE ${key} LIKE concat('%', #{word}, '%')
+        </if>
+        <!-- 동적쿼리(정렬 조건) -->
+        <if test="orderBy != null">
+            ORDER BY ${orderBy} ${orderByDir}
+        </if>    
+            
+    </select>
+    
+</mapper>

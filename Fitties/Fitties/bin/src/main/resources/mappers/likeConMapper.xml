@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 네임스페이스에 DAO 풀패키지명을 작성 -->
+<mapper namespace="com.ssafy.fitty.model.dao.board.LikeConDao">
+	<!-- 좋아요 등록 (중복방지를 위한 누른사람 저장) -->
+    <insert id="insertLike" parameterType="LikeCon">
+        INSERT INTO boardLike (board_num, user_id)
+        VALUES (#{boardNum}, #{userId});
+    </insert>
+
+	<!-- 좋아요 삭제 -->
+    <delete id="deleteLike" parameterType="LikeCon">
+        DELETE FROM boardLike
+        WHERE user_id = #{userId} and board_num = #{boardNum};
+    </delete>
+</mapper>
